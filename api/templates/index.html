@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'css/style.css') }}">
+    <title>Image Classifier</title>
+</head>
+<body>
+	<h1>Welcome to the Image Classifier api</h1>
+	<h2>An algorithm who can classify your uploaded Image</h2>
+	<h1>Upload an image</h1>
+	<form method="post" action="/" enctype="multipart/form-data">
+		<dl>
+		<p>
+			<input type="file" name="file" autocomplete="off" required>
+		</p>
+		</dl>
+		<br>
+		<p>
+		<input type="submit" value="Submit">
+		</p>
+	</form>
+	<p>
+		{% with messages = get_flashed_messages() %}
+		  {% if messages %}
+			Label predicted: {{ messages[0] }} with a score of {{messages[1]}} %
+			<br>
+			<br>
+			<img class="predicted-img" src="{{url_for('static', filename=messages[2])}}" width=400px/>
+		  {% endif %}
+		{% endwith %}
+	</p>
+</body>
+</html>
+

@@ -1,0 +1,44 @@
+body {
+	background-image: url( img/background.jpg );
+	background-attachment: fixed;
+	max-width: 80vw;
+	display: flex;
+	padding-left: 10vw;
+	padding-right: 10vw;
+	flex-direction: column;
+}
+
+h1 {
+    
+    color: rgb(202, 27, 27);
+    text-align: center;
+    padding: 10px;
+}
+
+h2 {
+	text-align: center;
+	color: grey;
+}
+
+p, form {
+	text-align: center;
+	color: grey;
+	size: 15px;
+}
+
+div {
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	background-color: #D6D5D5;
+	border: 2px #332D2D solid;
+}
+
+form, .form-fields{
+	display: flex;
+	/* flex-direction: column;
+	justify-content: space-between; */
+	flex-wrap: wrap;
+	padding-left: 10vw;
+}
