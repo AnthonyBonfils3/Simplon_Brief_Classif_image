@@ -1,13 +1,16 @@
 body {
 	background-image: url( img/background.jpg );
 	background-attachment: fixed;
+    background-size: cover;
+}
+.centered_section
+{
 	max-width: 80vw;
 	display: flex;
 	padding-left: 10vw;
 	padding-right: 10vw;
 	flex-direction: column;
 }
-
 h1 {
     
     color: rgb(202, 27, 27);
@@ -22,7 +25,7 @@ h2 {
 
 p, form {
 	text-align: center;
-	color: grey;
+	color: red;
 	size: 15px;
 }
 
@@ -41,4 +44,22 @@ form, .form-fields{
 	justify-content: space-between; */
 	flex-wrap: wrap;
 	padding-left: 10vw;
+}
+
+.footer{
+	display: flex;
+	flex-direction: raw;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	color: rgb(107, 129, 143);
+	background-color: black;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100vw;
+}
+
+.predicted-img
+{
+	height: 45vh
 }
